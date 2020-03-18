@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tuổi dựa vào năm sinh</title>
+</head>
+<body>
+<script>
+    let inputYear = parseInt(prompt("Mời nhập năm sinh của bạn"));
+    if(namsinh(inputYear)>120){
+        alert("Bạn sống hơi lâu rồi đấy");
+    }else if (namsinh(inputYear)>=0){
+        alert("Tuổi hiện tại của bạn là " + namsinh(inputYear));
+    }else {
+        alert('Số tuổi bạn nhập không phù hợp');
+    }
+    function namsinh(YearofBirth) {
+        let now = new Date().getFullYear(); //Lấy năm hiện tại từ hệ thống gán vào biến now
+        if (YearofBirth>now){
+            return -1;
+        }else {
+            return now - YearofBirth;
+        }
+
+    }
+</script>
+</body>
+</html>
